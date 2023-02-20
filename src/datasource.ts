@@ -1,14 +1,10 @@
-import { DataSourceInstanceSettings, CoreApp } from '@grafana/data';
+import { DataSourceInstanceSettings } from '@grafana/data';
 import { DataSourceWithBackend } from '@grafana/runtime';
 
-import { MyQuery, MyDataSourceOptions, DEFAULT_QUERY } from './types';
+import { AmqpQuery, AmqpDataSourceOptions } from './types';
 
-export class DataSource extends DataSourceWithBackend<MyQuery, MyDataSourceOptions> {
-  constructor(instanceSettings: DataSourceInstanceSettings<MyDataSourceOptions>) {
+export class DataSource extends DataSourceWithBackend<AmqpQuery, AmqpDataSourceOptions> {
+  constructor(instanceSettings: DataSourceInstanceSettings<AmqpDataSourceOptions>) {
     super(instanceSettings);
-  }
-
-  getDefaultQuery(_: CoreApp): Partial<MyQuery> {
-    return DEFAULT_QUERY
   }
 }

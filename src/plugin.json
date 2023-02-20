@@ -11,12 +11,23 @@
     "author": {
       "name": "Maor2475"
     },
-    "keywords": ["datasource"],
+    "keywords": [
+      "datasource",
+      "iot",
+      "streaming",
+      "amqp",
+      "rabbitmq"
+    ],
     "logos": {
-      "small": "img/logo.svg",
-      "large": "img/logo.svg"
+      "small": "img/rabbitmq-logo.svg",
+      "large": "img/rabbitmq-logo.svg"
     },
-    "links": [],
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://github.com/maor-mil/grafana-amqp-datasource"
+      }
+    ],
     "screenshots": [],
     "version": "%VERSION%",
     "updated": "%TODAY%"

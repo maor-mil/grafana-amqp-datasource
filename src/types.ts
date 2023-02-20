@@ -1,24 +1,24 @@
 import { DataQuery, DataSourceJsonData } from '@grafana/data';
+//import internal from 'stream';
 
-export interface MyQuery extends DataQuery {
+export interface AmqpQuery extends DataQuery {
+  /*steamName: string;
+  maxLengtrhBytes?: number;
+  maxAge?: number;
+  consumerName: string;
+  crc?: boolean;
+  constant: number;*/
   queryText?: string;
   constant: number;
 }
 
-export const DEFAULT_QUERY: Partial<MyQuery> = {
-  constant: 6.5,
-};
-
-/**
- * These are options configured for each DataSource instance
- */
-export interface MyDataSourceOptions extends DataSourceJsonData {
-  path?: string;
+export interface AmqpDataSourceOptions extends DataSourceJsonData {
+  host: string;
+  port: number;
+  username?: string;
+  tlsConnection?: boolean;
 }
 
-/**
- * Value that is used in the backend, but never sent over HTTP to the frontend
- */
-export interface MySecureJsonData {
-  apiKey?: string;
+export interface AmqpSecureJsonData {
+  password?: string;
 }
